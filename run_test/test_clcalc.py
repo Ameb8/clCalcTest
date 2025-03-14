@@ -4,9 +4,8 @@ from test_results import TestResults
 from expr_result import  get_result
 from report import get_report
 
-
+# Gets results for inputted expression
 def evaluate_expr(expr, py_expr):
-    # get results
     clcalc_result = get_clc_result(expr)
     py_result = get_result(py_expr)
     return clcalc_result, py_result

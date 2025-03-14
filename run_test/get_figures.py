@@ -3,7 +3,8 @@ import plotly.express as px
 from test_results import TestResults
 import pandas as pd
 
-template = 'ggplot2'
+template = 'ggplot2' # Standard template for all figures
+
 
 def expr_len_bar(test_results):
     # Count occurrences of each length for all expressions
