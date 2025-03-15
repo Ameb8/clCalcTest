@@ -20,12 +20,15 @@ class ExprResult:
 
     def __str__(self):
         str = []
-        str.append(f'\nResult: {self.result}')
+        if self.result is None:
+            str.append('Expression could not be evaluated')
+        else:
+            str.append(f'Expression evaluates to: {self.result}')
         if self.math_err or self.syntax_err:
             if self.math_err:
-                str.append('\n\tMath Error Detected')
+                str.append(', Math Error Detected')
             if self.syntax_err:
-                str.append('\n\tSyntax Error Detected')
+                str.append(', Syntax Error Detected')
         return ''.join(str)
 
 

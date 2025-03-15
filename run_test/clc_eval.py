@@ -3,14 +3,12 @@ import subprocess
 from expr_result import ExprResult
 
 
-def get_clc_result(expr, debug=False):
+def get_clc_result(expr):
     # Pass the expression to 'clc' in the command line and capture the output
     command = f'clc "{expr}"'  # Format command for CLI execution
     try:
         result = subprocess.run(command, shell=True, capture_output=True, text=True)
         command_output = result.stdout.strip()  # Get the result from the command line
-        if debug:
-            print(command_output)
     except Exception as e:
         command_output = f"Could not access clCalc: {e}\nPlease check clCalc status"
 
