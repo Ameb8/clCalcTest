@@ -1,6 +1,6 @@
 import webbrowser
 import os
-import get_report_figures as get
+from .get_report_figures import *
 
 
 def get_expr_len_stats(test_results):
@@ -162,10 +162,10 @@ def get_report(test_results, filename="test_results_report.html"):
 
     # Now add statistics
     html_content += get_expr_len_stats(test_results)
-    html_content += get.expr_len_bar(test_results)
-    html_content += get.num_op_bar(test_results)
-    html_content += get.conf_matrix(test_results)
-    html_content += get.error_pie(test_results)
+    html_content += expr_len_bar(test_results)
+    html_content += num_op_bar(test_results)
+    html_content += conf_matrix(test_results)
+    html_content += error_pie(test_results)
 
     # Add footer
     html_content += """
