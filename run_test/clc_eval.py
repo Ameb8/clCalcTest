@@ -1,6 +1,6 @@
 import re
 import subprocess
-from expr_result import ExprResult
+from .expr_result import ExprResult
 
 
 def get_clc_result(expr):

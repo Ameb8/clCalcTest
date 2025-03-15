@@ -1,7 +1,7 @@
-from expr_builder import ExprBuilder
-from clc_eval import get_clc_result
-from test_results import TestResults
-from expr_result import  get_result
+from .expr_builder import ExprBuilder
+from .clc_eval import get_clc_result
+from .test_results import TestResults
+from .expr_result import  get_result
 
 # Gets results for inputted expression
 def evaluate_expr(expr, py_expr):

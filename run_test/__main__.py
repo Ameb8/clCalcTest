@@ -1,5 +1,5 @@
-from test_clcalc import test
-from report import get_report
+from .test_clcalc import test
+from .report import get_report
 
 def main():
     print('Welcome to clCalcTest')
